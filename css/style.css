@@ -1187,6 +1187,25 @@ td.neg.muted { color: #C0392B; opacity: 0.7; }
   max-width: 760px;
 }
 
+/* ---- GIA NOTICE ---- */
+.gia-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px 22px;
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  border-left: 4px solid #F59E0B;
+  border-radius: var(--r-md);
+  margin-bottom: 36px;
+  font-size: 0.855rem;
+  color: #78350F;
+  line-height: 1.7;
+}
+.gia-notice svg { flex-shrink: 0; color: #D97706; margin-top: 2px; }
+.gia-notice strong { color: #92400E; font-weight: 700; }
+.gia-notice a { color: #B45309; font-weight: 600; text-decoration: underline; }
+
 /* ---- SUITABILITY ---- */
 .suitability-grid {
   display: grid;
