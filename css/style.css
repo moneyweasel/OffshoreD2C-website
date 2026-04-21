@@ -631,6 +631,201 @@ button {
   color: rgba(255,255,255,0.35);
 }
 
+/* ---- PERF NOTE BAR ---- */
+.perf-note-bar {
+  background: rgba(139,139,59,0.08);
+  border-bottom: 1px solid rgba(139,139,59,0.2);
+  padding: 10px 0;
+}
+
+.perf-note-bar .container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.perf-note-bar svg { flex-shrink: 0; color: var(--gold); }
+
+/* ---- INSTRUMENT CARD TICKER ---- */
+.instrument-card__ticker {
+  padding: 4px 20px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gold-light);
+  letter-spacing: 0.06em;
+}
+
+/* ---- METHOD GRID FOUR ---- */
+.method-grid--four {
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 48px;
+}
+
+.method-grid--four .method-card:first-child { border-radius: var(--radius-md) 0 0 var(--radius-md); }
+.method-grid--four .method-card:last-child  { border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+
+.method-card__num {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 12px;
+}
+
+/* ---- METHOD PROCESS ---- */
+.method-process {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--dark-border);
+  border: 1px solid var(--dark-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.method-process__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 24px 28px;
+  background: rgba(255,255,255,0.03);
+}
+
+.method-process__num {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--gold-light);
+  flex-shrink: 0;
+  padding-top: 3px;
+  width: 24px;
+}
+
+.method-process__item h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+
+.method-process__item p {
+  font-size: 0.84rem;
+  color: var(--dark-muted);
+  line-height: 1.7;
+}
+
+/* ---- PERFORMANCE ---- */
+.perf-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 24px;
+}
+
+.perf-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--white);
+}
+
+.perf-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.perf-table thead tr {
+  background: var(--navy);
+}
+
+.perf-table th {
+  padding: 12px 20px;
+  text-align: left;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  white-space: nowrap;
+}
+
+.perf-table td {
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border);
+  color: var(--navy);
+  font-variant-numeric: tabular-nums;
+}
+
+.perf-table tbody tr:last-child td { border-bottom: none; }
+.perf-table tbody tr:hover { background: var(--tinted); }
+
+.perf-note-inline {
+  font-size: 0.72rem;
+  color: var(--muted-light);
+  margin-left: 4px;
+}
+
+td.pos { color: #1a6b3a; font-weight: 500; }
+td.neg { color: #922b21; font-weight: 500; }
+td.muted { color: var(--muted); }
+td.neg.muted { color: #c0392b; opacity: 0.65; }
+
+.perf-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 200px;
+}
+
+.perf-stat-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+}
+
+.perf-stat-card__value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.02em;
+  margin-bottom: 3px;
+  font-variant-numeric: tabular-nums;
+}
+
+.perf-stat-card__label {
+  font-size: 0.72rem;
+  color: var(--muted-light);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.perf-disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: var(--muted-light);
+  line-height: 1.65;
+  max-width: 720px;
+}
+
+.perf-disclaimer svg { flex-shrink: 0; margin-top: 1px; color: var(--gold); }
+
+/* ---- CTA ISIN SEP ---- */
+.cta-block__isin-sep {
+  color: rgba(255,255,255,0.2);
+  font-size: 1rem;
+}
+
 /* ---- STEPS ---- */
 .steps {
   display: grid;
@@ -782,12 +977,32 @@ button {
   margin-top: 1px;
 }
 
+.icon-neutral {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--muted-light);
+  margin-top: 1px;
+}
+
 .icon-check {
   width: 18px;
   height: 18px;
   flex-shrink: 0;
   color: var(--gold);
   margin-top: 1px;
+}
+
+.compare-note {
+  margin-top: 24px;
+  font-size: 0.82rem;
+  color: var(--muted-light);
+  line-height: 1.65;
+  max-width: 720px;
+  padding: 16px 20px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
 }
 
 /* ---- SUITABILITY ---- */
@@ -1142,8 +1357,30 @@ button {
     gap: 1px;
   }
 
+  .method-grid--four {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .method-grid--four .method-card:first-child { border-radius: var(--radius-md) 0 0 0; }
+  .method-grid--four .method-card:nth-child(2) { border-radius: 0 var(--radius-md) 0 0; }
+  .method-grid--four .method-card:nth-child(3) { border-radius: 0 0 0 var(--radius-md); }
+  .method-grid--four .method-card:last-child  { border-radius: 0 0 var(--radius-md) 0; }
+
   .method-card:first-child { border-radius: var(--radius-md) var(--radius-md) 0 0; }
   .method-card:last-child  { border-radius: 0 0 var(--radius-md) var(--radius-md); }
+
+  .perf-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .perf-stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: unset;
+  }
+
+  .perf-stat-card { flex: 1; min-width: 140px; }
 
   .steps {
     grid-template-columns: repeat(2, 1fr);
@@ -1210,6 +1447,13 @@ button {
 
   .stat-divider { display: none; }
   .stat { flex: none; }
+
+  /* Method four */
+  .method-grid--four { grid-template-columns: 1fr; }
+  .method-grid--four .method-card:first-child { border-radius: var(--radius-md) var(--radius-md) 0 0; }
+  .method-grid--four .method-card:last-child  { border-radius: 0 0 var(--radius-md) var(--radius-md); }
+  .method-grid--four .method-card:nth-child(2),
+  .method-grid--four .method-card:nth-child(3) { border-radius: 0; }
 
   /* Steps */
   .steps {
